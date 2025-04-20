@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgotten Flask: Operation Whispergrid</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Whispergrid Internal Files</h1>
+
+        <!-- File Dropdown -->
+        <div class="file-selector">
+            <label for="fileSelect">Choose a file:</label>
+            <select id="fileSelect" onchange="loadFile()">
+                {% for fid, title in files %}
+                    <option value="{{ fid }}">{{ title }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- File Preview -->
+        <div class="file-preview">
+            <h3>File Preview:</h3>
+            <div id="fileContent">
+                {% if file_content %}
+                    <h4>{{ file_title }}</h4>
+                    <pre>{{ file_content }}</pre>
+                {% else %}
+                    <p>Select a file to preview its content.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Hint Section -->
+        <div class="hint">
+            <p><strong>Hint:</strong> If something seems missing or incomplete, maybe there's a way to explore more files...</p>
+        </div>
+    </div>
+
+    <script>
+        function loadFile() {
+            const fileId = document.getElementById('fileSelect').value;
+            window.location.href = `/file?id=${fileId}`;
+        }
+    </script>
+
+</body>
+</html>
+

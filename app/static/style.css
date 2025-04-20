@@ -1,0 +1,43 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h3 {
+    color: #00FF00;
+}
+
+.file-selector, .file-preview, .hint {
+    margin-bottom: 20px;
+}
+
+select {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #00FF00;
+    padding: 10px;
+}
+
+pre {
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 15px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.hint p {
+    background-color: #444;
+    padding: 15px;
+    color: #ff6600;
+}
+
