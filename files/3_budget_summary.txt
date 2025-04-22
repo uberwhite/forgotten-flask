@@ -1,1 +1,9 @@
-Heeey
+
+------------------Budget Summary --------
+Plane tickets ....................1200
+Hotel rooms   ....................4500
+Catering      ....................2000
+Honk Entertainment ...............5000
+Light&sound   ....................2000
+Healthy sweets....................3000
+
